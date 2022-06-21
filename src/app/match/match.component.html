@@ -1,0 +1,14 @@
+<div class="round-block" *ngIf="rightBuilding.name != 'Здание'">
+    <img src="{{ rightBuildingImage }}" alt="">
+    <div class="answers">
+        <button (click)="selectAnswer(buildings[0].name)"> {{ buildings[0].name }} </button>
+        <button (click)="selectAnswer(buildings[1].name)"> {{ buildings[1].name }} </button>
+        <button (click)="selectAnswer(buildings[2].name)"> {{ buildings[2].name }} </button>
+        <button (click)="selectAnswer(buildings[3].name)"> {{ buildings[3].name }} </button>
+    </div>
+    <div class="info">
+        <p> Текущий счет:{{ matchScore }} </p>
+        <p *ngIf="roundEnded == true"> {{ printBuildingInfo() }} </p>
+        <button class="next-btn" (click)="loadRandomBuilding()">Следующее изображение</button>
+    </div>  
+</div>

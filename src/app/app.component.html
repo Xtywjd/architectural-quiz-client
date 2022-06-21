@@ -1,0 +1,9 @@
+<div *ngIf="matchStarted == false">
+    <h1>Architectural quiz</h1>
+    <div class="start-btn">
+        <button (click)="startMatch()">Начать викторину</button>
+    </div>
+</div>
+<div *ngIf="matchStarted == true">
+    <app-round></app-round>
+</div>
